@@ -16,30 +16,33 @@ public class MathUtils {
      */
     public static double raiseToPower(int base, int exp) {
         /* Set initial result to be just the number */
-        int res = base;
+        double res = base;
 
+
+        res = Math.pow(base, exp);
         /* Determine if the exponent is negative */
-        boolean isNegative = false;
-        if (exp < 0) {
-            exp *= -1;
-            isNegative = true;
-        }
-
-        /* Multiply the result by the base exp times
-            Ex: base = 2, exp = 2
-               --> res = 2, then res = 4 */
-        for (int i = 0; i < exp; i++) {
-           res *= base; 
-        }
-
-        /* If it's a negative exponent, we should invert it! */
-        if (isNegative) {
-            double dividedRes = divideNumbers(1, res);
-            return dividedRes;
-        }
-        /* Otherwise, we are safe to just return the result */
-        else {
-            return res;
-        }
+//        boolean isNegative = false;
+//        if (exp < 0) {
+//            exp *= -1;
+//            isNegative = true;
+//        }
+//
+//        /* Multiply the result by the base exp times
+//            Ex: base = 2, exp = 2
+//               --> res = 2, then res = 4 */
+//        for (int i = 0; i < exp; i++) {
+//           res *= base;
+//        }
+//
+//        /* If it's a negative exponent, we should invert it! */
+//        if (isNegative) {
+//            double dividedRes = divideNumbers(1, res);
+//            return dividedRes;
+//        }
+//        /* Otherwise, we are safe to just return the result */
+//        else {
+//            return res;
+//        }
+        return res;
     }    
 }
